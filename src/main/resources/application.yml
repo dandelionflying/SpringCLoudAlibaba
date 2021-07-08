@@ -1,0 +1,32 @@
+# springboot 2.5.x版本
+
+management:
+  #显示资源详情
+  endpoint:
+    health:
+      show-details: always
+  #激活所有端点 默认只有health
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#描述信息
+info:
+  app: dandleion
+  site: www.running4light.cn
+
+
+
+#连字符
+---
+# profile=x的专用属性，也就是某个环境下的专用属性 比如这是开发环境
+# @deprecated since 2.4.0 for removal in 2.6.0 in favor of  原方式spring.profiles已废弃 2.5.x版本不支持
+profiles: dev
+
+---
+# profile=y的专用属性，也就是某个环境下的专用属性 比如这是生产环境
+profiles: prod
+server:
+  tomcat:
+    threads:
+      max: 400
