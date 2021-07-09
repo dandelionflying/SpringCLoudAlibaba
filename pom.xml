@@ -5,6 +5,11 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
+        <!--语义化的版本控制-->
+        <!--2:主版本-->
+        <!--5：次版本，一些功能的增加，架构没有太大变化-->
+        <!--2：增量版本，bug修复-->
+        <!--release：  SNAPSHOT开发板，M里程碑，RELEASE正式版-->
         <version>2.5.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
