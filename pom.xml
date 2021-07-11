@@ -11,6 +11,7 @@
         <!--2：增量版本，bug修复-->
         <!--release：  SNAPSHOT开发板，M里程碑，RELEASE正式版-->
         <version>2.5.2</version>
+        <!--<version>2.3.2.RELEASE</version>-->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.running4light</groupId>
@@ -21,6 +22,33 @@
     <properties>
         <java.version>13</java.version>
     </properties>
+
+    <!-- 最好使用官网推荐的版本搭配：
+https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E
+    -->
+
+    <dependencyManagement>
+        <dependencies>
+            <!--整合springcloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--整合springcloud alibaba-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.6.RC1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--整合完毕后需要使用springcloudalibaba 的子项目时，不需要指定版本-->
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
