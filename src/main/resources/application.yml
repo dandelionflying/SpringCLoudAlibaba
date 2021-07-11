@@ -1,30 +1,30 @@
-# springboot 2.5.x°æ±¾
+# springboot 2.5.xç‰ˆæœ¬
 
 management:
-  #ÏÔÊ¾×ÊÔ´ÏêÇé
+  #æ˜¾ç¤ºèµ„æºè¯¦æƒ…
   endpoint:
     health:
       show-details: always
-  #¼¤»îËùÓĞ¶Ëµã Ä¬ÈÏÖ»ÓĞhealth
+  #æ¿€æ´»æ‰€æœ‰ç«¯ç‚¹ é»˜è®¤åªæœ‰health
   endpoints:
     web:
       exposure:
         include: "*"
-#ÃèÊöĞÅÏ¢
+#æè¿°ä¿¡æ¯
 info:
   app: dandleion
   site: www.running4light.cn
 
 
 
-#Á¬×Ö·û
+#è¿å­—ç¬¦
 ---
-# profile=xµÄ×¨ÓÃÊôĞÔ£¬Ò²¾ÍÊÇÄ³¸ö»·¾³ÏÂµÄ×¨ÓÃÊôĞÔ ±ÈÈçÕâÊÇ¿ª·¢»·¾³
-# @deprecated since 2.4.0 for removal in 2.6.0 in favor of  Ô­·½Ê½spring.profilesÒÑ·ÏÆú 2.5.x°æ±¾²»Ö§³Ö
+# profile=xçš„ä¸“ç”¨å±æ€§ï¼Œä¹Ÿå°±æ˜¯æŸä¸ªç¯å¢ƒä¸‹çš„ä¸“ç”¨å±æ€§ æ¯”å¦‚è¿™æ˜¯å¼€å‘ç¯å¢ƒ
+# @deprecated since 2.4.0 for removal in 2.6.0 in favor of  åŸæ–¹å¼spring.profileså·²åºŸå¼ƒ 2.5.xç‰ˆæœ¬ä¸æ”¯æŒ
 profiles: dev
 
 ---
-# profile=yµÄ×¨ÓÃÊôĞÔ£¬Ò²¾ÍÊÇÄ³¸ö»·¾³ÏÂµÄ×¨ÓÃÊôĞÔ ±ÈÈçÕâÊÇÉú²ú»·¾³
+# profile=yçš„ä¸“ç”¨å±æ€§ï¼Œä¹Ÿå°±æ˜¯æŸä¸ªç¯å¢ƒä¸‹çš„ä¸“ç”¨å±æ€§ æ¯”å¦‚è¿™æ˜¯ç”Ÿäº§ç¯å¢ƒ
 profiles: prod
 server:
   tomcat:
