@@ -21,13 +21,13 @@ public class AutowiredAndResourceService {
     private User user1;
     @Resource
     private User user2;
-    @Resource
-    private User user3;
+//    @Resource
+//    private User user3;
 
     public void func(){
         System.err.println(user1.getName());// 输出user1
         System.err.println(user2.getName());// 输出user2
         System.err.println(user.getName());// 输出user1
-        System.err.println(user3.getName());// 运行时报错
+//        System.err.println(user3.getName());// 运行时报错
     }
 }
