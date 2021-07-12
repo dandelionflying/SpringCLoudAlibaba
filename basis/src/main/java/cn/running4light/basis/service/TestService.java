@@ -1,6 +1,6 @@
 package cn.running4light.basis.service;
 
-import cn.running4light.basis.common.ServiceList;
+import cn.running4light.common.ServiceList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
