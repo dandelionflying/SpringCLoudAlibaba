@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author running4light
@@ -21,12 +22,13 @@ public class TestService {
     private RestTemplate restTemplate;
     public String serviceGet() {
         // 根据服务名获取目标服务的主机名端口号等信息
-        ServiceInstance basis2 = client.getInstances("basis2").get(0);
-        String host = basis2.getHost();
-        String instanceId =  basis2.getInstanceId();
-        int port = basis2.getPort();
-        String serviceId = basis2.getServiceId();
-        String forObject = restTemplate.getForObject("http://"+host+":" + port + "/basis2/findBasis2", String.class);
+        List<ServiceInstance> basis2 = client.getInstances("basis2");
+        String url = basis2.stream()
+                .map(instance->instance.getUri()+"/basis2/findBasis2")
+                .findFirst()
+                .orElseThrow(()->new IllegalArgumentException("当前没有实例"));
+//        String forObject = restTemplate.getForObject("http://"+host+":" + port + "/basis2/findBasis2", String.class);
+        String forObject = restTemplate.getForObject(url, String.class);
         return forObject;
     }
 }
