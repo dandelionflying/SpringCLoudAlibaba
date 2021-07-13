@@ -15,3 +15,7 @@ spring:
 basis2:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#    NFLoadBalancerClassName: ILoadBalancer实现类
+#    NFLoadBalancerPingClassName: IPing实现类
+#    NIWSServerListClassName: ServerList实现类
+#    NIWSServerListFilterClassName: ServerListFilter实现类
