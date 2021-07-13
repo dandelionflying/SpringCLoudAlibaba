@@ -11,6 +11,7 @@ spring:
 #        cluster-name:
 #        namespace:
 
+#配置服务的负载均衡规则
 basis2:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
