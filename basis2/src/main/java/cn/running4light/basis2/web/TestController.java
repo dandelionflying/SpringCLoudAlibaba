@@ -15,6 +15,7 @@ public class TestController {
 
     @GetMapping("findBasis2")
     public String findBasis2(){
+        System.err.println("请求成功");
         return "findBasis2Success";
     }
 }
