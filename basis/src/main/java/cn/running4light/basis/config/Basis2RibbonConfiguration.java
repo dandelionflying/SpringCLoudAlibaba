@@ -9,8 +9,8 @@ import ribbonconfiguration.RibbonConfiguration;
  * @description 指定ribbonClient配置类
  * @createTime 2021/7/13 14:18
  */
-@Configuration
-@RibbonClient(name = "basis2", configuration = RibbonConfiguration.class)
+//@Configuration
+//@RibbonClient(name = "basis2", configuration = RibbonConfiguration.class)
 public class Basis2RibbonConfiguration {
 
 

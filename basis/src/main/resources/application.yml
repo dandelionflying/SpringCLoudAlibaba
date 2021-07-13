@@ -10,3 +10,7 @@ spring:
         server-addr: 127.0.0.1:8848
 #        cluster-name:
 #        namespace:
+
+basis2:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
