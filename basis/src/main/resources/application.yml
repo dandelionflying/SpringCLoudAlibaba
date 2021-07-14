@@ -19,3 +19,15 @@ basis2:
 #    NFLoadBalancerPingClassName: IPing实现类
 #    NIWSServerListClassName: ServerList实现类
 #    NIWSServerListFilterClassName: ServerListFilter实现类
+
+
+# 饥饿模式--防止第一次请求过慢
+ribbon:
+  eager-load:
+    enabled: true
+    clients: basis2
+logging:
+  level:
+#    feign日志级别建立在feign的接口的日志级别是在debug只上的,如果是info级别 feign日志级别设置不会生效
+    cn.running4light.basis.web.feigns.Basis2Web: debug
+#    cn.running4light.basis.web.feigns.Basis2Web: info
