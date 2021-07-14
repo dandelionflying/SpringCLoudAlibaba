@@ -31,3 +31,8 @@ logging:
 #    feign日志级别建立在feign的接口的日志级别是在debug只上的,如果是info级别 feign日志级别设置不会生效
     cn.running4light.basis.web.feigns.Basis2Web: debug
 #    cn.running4light.basis.web.feigns.Basis2Web: info
+feign:
+  client:
+    config:
+      basis2:
+        loggerLever: full
