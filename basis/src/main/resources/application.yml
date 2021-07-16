@@ -36,3 +36,12 @@ feign:
     config:
       basis2:
         loggerLever: full
+  httpclient:
+    enabled: true
+    # max-connections max-connections-per-route 的具体值需根据实际项目压测结果确定相对最优配置
+    # feign 最大连接池数
+    max-connections: 200
+    # feign 单个路径的最大连接数
+    max-connections-per-route: 50
+feignServices:
+  basis2: basis2
