@@ -10,6 +10,13 @@ spring:
         server-addr: 127.0.0.1:8848
 #        cluster-name:
 #        namespace:
+    sentinel:
+      log:
+        dir: output\
+      transport:
+        # 指定sentinel 控制台地址
+        dashboard: localhost:8080
+        port: 8719
 
 #配置服务的负载均衡规则
 basis2:
@@ -45,3 +52,10 @@ feign:
     max-connections-per-route: 50
 feignServices:
   basis2: basis2
+
+management:
+  #激活所有端点 默认只有health
+  endpoints:
+    web:
+      exposure:
+        include: "*"
