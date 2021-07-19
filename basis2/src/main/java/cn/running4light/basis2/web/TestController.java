@@ -15,6 +15,12 @@ public class TestController {
 
     @GetMapping("findBasis2")
     public String findBasis2(){
+        /*try {
+            Thread.sleep(800);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+        double ss = 1/0;
         System.err.println("请求成功");
         return "findBasis2Success";
     }
