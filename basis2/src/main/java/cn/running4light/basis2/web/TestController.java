@@ -20,7 +20,7 @@ public class TestController {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }*/
-        double ss = 1/0;
+//        double ss = 1/0;
         System.err.println("请求成功");
         return "findBasis2Success";
     }

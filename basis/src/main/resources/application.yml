@@ -50,6 +50,9 @@ feign:
     max-connections: 200
     # feign 单个路径的最大连接数
     max-connections-per-route: 50
+#    为feign整合sentinel
+  sentinel:
+    enabled: true
 feignServices:
   basis2: basis2
 
@@ -59,3 +62,6 @@ management:
     web:
       exposure:
         include: "*"
+#resttemplate:
+#  sentinel:
+#    enabled: false
