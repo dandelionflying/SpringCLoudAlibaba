@@ -61,7 +61,7 @@ feign:
     max-connections-per-route: 50
 #    为feign整合sentinel
   sentinel:
-    enabled: true
+    enabled: false
 feignServices:
   basis2: basis2
 
