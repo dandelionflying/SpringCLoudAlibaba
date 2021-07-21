@@ -8,12 +8,15 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.io.FileNotFoundException;
+import java.time.ZonedDateTime;
 
 /**
  * @author running4light
@@ -88,5 +91,18 @@ public class TestController {
     public String fallback(String a){
         log.warn("fallback...");
         return "fallback...";
+    }
+    @GetMapping("getPath")
+    public String getPath() {
+        System.out.println(ZonedDateTime.now());
+        String path = null;
+        try {
+//            path = ResourceUtils.getURL("classpath:").getPath();
+            path = System.getProperty("user.dir");// 根路径（非模块根路径）
+            System.err.println(path);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return path;
     }
 }
