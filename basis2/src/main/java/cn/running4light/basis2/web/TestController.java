@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @createTime 2021/7/12 14:44
  */
 @RestController
-@RequestMapping("basis2")
+@RequestMapping("/basis2/basis2Test")
 public class TestController {
 
     @GetMapping("findBasis2")

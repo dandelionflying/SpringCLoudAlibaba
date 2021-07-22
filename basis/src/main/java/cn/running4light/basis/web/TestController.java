@@ -24,7 +24,7 @@ import java.time.ZonedDateTime;
  * @createTime 2021/7/12 14:29
  */
 @RestController
-@RequestMapping("basisTest")
+@RequestMapping("/basis/basisTest")
 public class TestController {
     private final Logger log = LoggerFactory.getLogger(TestController.class);
     @Resource

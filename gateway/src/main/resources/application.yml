@@ -21,11 +21,13 @@ spring:
 #            - After=2021-07-21T18:59:40.888481300+08:00[Asia/Shanghai]
 #            - Query=a, 1.
             - Path=/*/basisTest/**
+#          filters:
+#            - AddRequestHeader=X-Request-red, blue
         - id: basis2_route
           uri: lb://basis2
           predicates:
 #            - After=2021-07-21T18:59:40.888481300+08:00[Asia/Shanghai]
-            - Path=/*/basis2/**
+            - Path=/*/basis2Test/**
 management:
   endpoints:
     web:

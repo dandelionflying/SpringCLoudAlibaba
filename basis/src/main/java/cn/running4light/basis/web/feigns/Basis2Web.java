@@ -16,6 +16,6 @@ import org.springframework.web.bind.annotation.GetMapping;
     fallbackFactory = Basis2FeignClientFallBackFactory.class
 )
 public interface Basis2Web {
-    @GetMapping("/basis2/findBasis2")
+    @GetMapping("/basis2/basis2test/findBasis2")
     String findBasis2();
 }
