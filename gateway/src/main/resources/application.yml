@@ -20,7 +20,7 @@ spring:
 #            - After=2021-07-23T00:00:00+08:00[Asia/Shanghai]
 #            - After=2021-07-21T18:59:40.888481300+08:00[Asia/Shanghai]
 #            - Query=a, 1.
-            - Path=/*/basisTest/**
+            - Path=/basis/**/**
 #配置过滤器
 #          filters:
 #            - AddRequestHeader=X-Request-red, blue
@@ -28,7 +28,7 @@ spring:
           uri: lb://basis2
           predicates:
 #            - After=2021-07-21T18:59:40.888481300+08:00[Asia/Shanghai]
-            - Path=/*/basis2Test/**
+            - Path=/basis2/**/**
 management:
   endpoints:
     web:
