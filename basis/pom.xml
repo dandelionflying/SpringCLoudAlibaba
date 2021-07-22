@@ -81,15 +81,19 @@
             <artifactId>sentinel-parameter-flow-control</artifactId>
         </dependency>
         <!-- 拉模式配置sentinel规则 -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-extension</artifactId>
-        </dependency>
+        </dependency>-->
         <!--nacos配置sentinel规则-->
         <!--<dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
         <dependency>
             <groupId>cn.running4light</groupId>
             <artifactId>common</artifactId>
