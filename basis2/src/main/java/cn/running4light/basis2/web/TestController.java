@@ -45,4 +45,17 @@ public class TestController {
         logger.info("");
         return "basis2放行";
     }
+    /**
+     * @Description  测试RestTemplate的token传递
+     * @Author running4light朱泽雄
+     * @CreateTime 11:21 2021/7/23
+     * @Return
+     */
+    @RequestMapping("testTokenTransfer2")
+    @CheckLogin
+    public String testTokenTransfer2(){
+
+        logger.info("");
+        return "basis2/testTokenTransfer2放行";
+    }
 }
