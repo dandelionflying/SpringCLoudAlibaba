@@ -55,7 +55,7 @@ public class TestController {
     @CheckLogin
     public String testTokenTransfer2(){
 
-        logger.info("");
+        logger.info("basis2/testTokenTransfer2放行");
         return "basis2/testTokenTransfer2放行";
     }
 }

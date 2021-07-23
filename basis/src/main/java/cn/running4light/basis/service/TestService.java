@@ -27,8 +27,10 @@ public class TestService {
     private final Logger log = LoggerFactory.getLogger(TestService.class);
     @Autowired
     DiscoveryClient client;
-    @Resource
+    @Resource(name = "restTemplate")
     private RestTemplate restTemplate;
+    @Resource(name = "restTemplate2")
+    private RestTemplate restTemplate2;
     public String serviceGet() {
         // 根据服务名获取目标服务的主机名端口号等信息
         List<ServiceInstance> basis2 = client.getInstances("basis2");
@@ -44,7 +46,7 @@ public class TestService {
         return forObject;
     }
     /**
-     * @Description
+     * @Description 测试RestTemplate token转发--exchange（）方式
      * @Author running4light朱泽雄
      * @CreateTime 10:59 2021/7/23
      * @Return
@@ -62,5 +64,17 @@ public class TestService {
                 String.class
         );
         return exchange;
+    }
+    /**
+     * @Description 测试RestTemplate token转发--拦截器方式
+     * @Author running4light朱泽雄
+     * @CreateTime 10:59 2021/7/23
+     * @Return
+     */
+    public String tokenTransfer3() {
+        // 根据服务名获取目标服务的主机名端口号等信息
+        List<ServiceInstance> basis2 = client.getInstances("basis2");
+        String forObject = restTemplate2.getForObject("http://"+ ServiceList.basis2 + "/basis2/basis2Test/testTokenTransfer2", String.class);
+        return forObject;
     }
 }

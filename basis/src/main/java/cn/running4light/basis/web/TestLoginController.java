@@ -60,5 +60,16 @@ public class TestLoginController {
     public ResponseEntity<String> testTokenTransfer2(HttpServletRequest request){
         return testService.tokenTransfer2(request);
     }
+    /**
+     * @Description  测试RestTemplate token转发--拦截器方式
+     * @Author running4light朱泽雄
+     * @CreateTime 12:08 2021/7/23
+     * @Return
+     */
+    @CheckLogin
+    @GetMapping("testTokenTransfer3")
+    public String testTokenTransfer3(HttpServletRequest request){
+        return testService.tokenTransfer3();
+    }
 
 }
