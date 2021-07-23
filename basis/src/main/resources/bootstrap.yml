@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+#        默认是application.name 配置了则以此配置为准
+        prefix: basis
+#        如果不是默认的分组需要加上分组名
+        group: config_group
+        #加上控制台会不停输出config changed信息
+#        namespace: public
+  application:
+    name: basis
+  profiles:
+    active: dev
