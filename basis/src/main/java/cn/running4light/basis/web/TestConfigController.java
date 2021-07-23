@@ -18,6 +18,8 @@ public class TestConfigController {
 
     @Value("${my.config}")
     private String str;
+    @Value("${common.test}")
+    private String common;
     /**
      * @Description 测试从nacos配置中心读取配置
      * @Author running4light朱泽雄
@@ -27,5 +29,15 @@ public class TestConfigController {
     @GetMapping("getConfigFromNacos")
     public String getConfigFromNacos(){
         return str;
+    }
+    /**
+     * @Description 测试从nacos配置中心读取公共配置
+     * @Author running4light朱泽雄
+     * @CreateTime 18:16 2021/7/23
+     * @Return
+     */
+    @GetMapping("getCommonConfigFromNacos")
+    public String getCommonConfigFromNacos(){
+        return common;
     }
 }

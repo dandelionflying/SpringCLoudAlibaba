@@ -10,6 +10,11 @@ spring:
         group: config_group
         #加上控制台会不停输出config changed信息
 #        namespace: public
+        # 公共配置
+        shared-configs[0]:
+          data-id: common1.yaml # 配置文件名-Data Id
+          group: config_group   # 默认为DEFAULT_GROUP
+          refresh: true   # 是否动态刷新，默认为false
   application:
     name: basis
   profiles:
