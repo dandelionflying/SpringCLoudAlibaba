@@ -18,4 +18,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface Basis2Web {
     @GetMapping("/basis2/basis2Test/findBasis2")
     String findBasis2();
+    /**
+     * @Description 测试token转发
+     * @Author running4light朱泽雄
+     * @CreateTime 10:51 2021/7/23
+     * @Return
+     */
+    @GetMapping("/basis2/basis2Test/testTokenTransfer")
+    String testTokenTransfer();
 }

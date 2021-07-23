@@ -50,8 +50,11 @@ logging:
 feign:
   client:
     config:
+#      defalut:
       basis2:
         loggerLever: full
+        requestInterceptors:
+          - cn.running4light.basis.auth.interceptor.TokenRequestInterceptor
   httpclient:
     enabled: true
     # max-connections max-connections-per-route 的具体值需根据实际项目压测结果确定相对最优配置

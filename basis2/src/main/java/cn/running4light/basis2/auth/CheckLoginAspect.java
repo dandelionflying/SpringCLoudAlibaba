@@ -1,4 +1,4 @@
-package cn.running4light.basis.auth;
+package cn.running4light.basis2.auth;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class CheckLoginAspect {
     private Logger logger = LoggerFactory.getLogger(CheckLoginAspect.class);
-    @Around("@annotation(cn.running4light.basis.auth.CheckLogin)")
+    @Around("@annotation(cn.running4light.basis2.auth.CheckLogin)")
     public Object checkLogin(ProceedingJoinPoint point) throws Throwable {
         logger.info("登录校验中。。。。");
         // 从header获取token

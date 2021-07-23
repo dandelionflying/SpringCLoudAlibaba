@@ -23,6 +23,12 @@ public class Basis2FeignClientFallBackFactory implements FallbackFactory<Basis2W
                 logger.warn("发生限流", cause);
                 return "发生限流";
             }
+
+            @Override
+            public String testTokenTransfer() {
+                logger.warn("发生限流", cause);
+                return "发生限流";
+            }
         };
     }
 }
