@@ -1,0 +1,5 @@
+#默认false
+spring.cloud.config.allow-override: true
+#默认false
+spring.cloud.config.override-none: true
+# spring.cloud.config.override-systemm-properties: false 默认true
