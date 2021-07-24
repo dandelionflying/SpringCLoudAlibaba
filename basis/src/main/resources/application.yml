@@ -77,3 +77,6 @@ management:
 #resttemplate:
 #  sentinel:
 #    enabled: false
+
+# customConfig
+testPriority: localConfig
