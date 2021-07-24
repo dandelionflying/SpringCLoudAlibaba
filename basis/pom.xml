@@ -95,10 +95,10 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>-->
         <!-- 链路追踪：sleuth-->
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>cn.running4light</groupId>
             <artifactId>common</artifactId>
